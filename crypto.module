@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * @file
+ * Contains crypto.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function crypto_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the crypto module.
+    case 'help.page.crypto':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Allow ajax and operations') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function crypto_theme() {
+  return [
+    'crypto' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_theme().
+ */
+function crypto_cron() {
+}
+
+
+/**
+ * Implements hook_viwe().
+ */
+function crypto_node_view($node) {
+}

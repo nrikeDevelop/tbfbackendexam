@@ -1,0 +1,13 @@
+{
+    "name": "crypto",
+    "type": "drupal-module",
+    "description": "Allow ajax and operations",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/crypto",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/crypto",
+        "source": "http://cgit.drupalcode.org/crypto",
+    },
+}

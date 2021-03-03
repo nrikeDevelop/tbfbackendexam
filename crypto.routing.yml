@@ -1,0 +1,8 @@
+
+crypto.crypto_controller_getValues:
+  path: '/crypto/getValues'
+  defaults:
+    _controller: '\Drupal\crypto\Controller\CryptoController::getValues'
+    _title: 'values'
+  requirements:
+    _permission: 'access content'
