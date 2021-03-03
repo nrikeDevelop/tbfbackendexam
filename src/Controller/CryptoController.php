@@ -30,11 +30,12 @@ class CryptoController extends ControllerBase {
     foreach ($nodes as $node){
       $node = Node::load($node->id());
 
-      $curprice = floatval($node->field_number->value) * $currentValueOfBtcInEuro;
-
-      $node->set("title",$curprice);
-      $node->set("field_price",$currentValueOfBtcInEuro);
-      $node->save();
+      if (isset($node->field_price)){
+        $curprice = floatval($node->field_number->value) * $currentValueOfBtcInEuro;
+        $node->set("title",$curprice);
+        $node->set("field_price",$currentValueOfBtcInEuro);
+        $node->save();
+      }
     }
 
     $currdate =  date('l jS \of F Y h:i:s A');
